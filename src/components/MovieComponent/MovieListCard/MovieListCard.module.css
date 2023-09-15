@@ -1,0 +1,49 @@
+.MovieListCard {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 1fr;
+	align-content: stretch;
+	border-radius: 1rem;
+	border: 2px solid white;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px var(--shadow-color);
+	transition-duration: 0.8s;
+}
+
+.MovieListCard:hover {
+	border: 2px solid var(--active-element);
+	box-shadow: 0 0 10px var(--active-element);
+	transition-duration: 1s;
+}
+
+.MovieListCardImage {
+	border-radius: inherit;
+	width: 100%;
+}
+
+.MovieListCardInfo {
+	height: 100%;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 75px;
+	align-items: center;
+	margin: 0.3rem 1.3rem;
+}
+
+.MovieListCardInfo > h4 {
+	padding-bottom: 0.3rem;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 130%;
+}
+
+.MovieListCardInfo > div {
+	padding-bottom: 0.8rem;
+}
+
+.MovieListCardInfo > div > p {
+	font-size: 17px;
+	line-height: 120%;
+	font-weight: 500;
+	padding: 0.5rem 0;
+}
