@@ -22,7 +22,6 @@ export const MoviePage: FC<MoviePagePropsInterface> = () => {
 	return (
 		<div className={["container"].join(", ")}>
 			<MovieComponent movies={movieList} />
-			{/* [x] pagination component */}
 			<div className={["paginationElement"].join(",")}>
 				<Pagination
 					size='large'

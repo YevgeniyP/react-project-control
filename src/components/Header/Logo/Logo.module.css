@@ -1,0 +1,15 @@
+.Logo {
+	display: grid;
+	grid-template-columns: 80px auto;
+	align-items: end;
+}
+
+.Logo > svg > path {
+	fill: var(--active-element);
+}
+
+.Logo > h1 {
+	font-family: "Titillium Web", sans-serif;
+	color: var(--active-element);
+	text-shadow: 1px 1px 1px var(--secondary-color);
+}

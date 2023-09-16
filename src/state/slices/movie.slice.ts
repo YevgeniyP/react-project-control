@@ -46,14 +46,14 @@ const getAllMovies = createAsyncThunk<
 const getMovieById = createAsyncThunk<
 	MovieDetailInterface,
 	number,
-	{ rejectValue: string[] }
+	{ rejectValue: string }
 >("getMovieById", async (movieId, { rejectWithValue }) => {
 	try {
 		const { data } = await movieService.getById(movieId);
 		return data;
 	} catch (e) {
 		const error = (await e) as ErrorResponseInterface;
-		return rejectWithValue(error.response.data.errors);
+		return rejectWithValue(error.response.data.status_message);
 	}
 });
 
@@ -65,7 +65,8 @@ export const movieSlice = createSlice({
 		builder
 			.addCase(getAllMovies.fulfilled, (state, action) => {
 				state.movieList = action.payload.results;
-				state.totalPage = action.payload.total_pages;
+				state.totalPage =
+					action.payload.total_pages > 500 ? 500 : action.payload.total_pages;
 				state.errors = [];
 			})
 			.addCase(getAllMovies.rejected, (state, action) => {
@@ -76,7 +77,7 @@ export const movieSlice = createSlice({
 				state.errors = [];
 			})
 			.addCase(getMovieById.rejected, (state, action) => {
-				state.errors = action.payload;
+				state.errors.push(action.payload);
 			})
 			.addMatcher(isPending(), (state) => {
 				state.isLoading = true;

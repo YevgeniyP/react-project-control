@@ -1,0 +1,16 @@
+.MovieInfo_overview {
+	font-size: 18px;
+	line-height: 130%;
+	text-align: justify;
+	padding-bottom: 2rem;
+}
+
+.MovieInfo_table {
+	width: 100%;
+	font-size: 18px;
+	line-height: 170%;
+}
+
+.MovieInfo_table > tbody > tr {
+	border-bottom: 1px solid var(--secondary-color);
+}

@@ -2,8 +2,8 @@ import { Rating } from "@mui/material";
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { baseImageURL } from "../../../constants";
 import { MovieInterface } from "../../../types";
+import { PosterPreview } from "../../PosterPreview/PosterPreview";
 
 import styles from "./MovieListCard.module.css";
 
@@ -18,12 +18,7 @@ export const MovieListCard: FC<MovieListCardPropsInterface> = ({ movie }) => {
 		<>
 			{movie && (
 				<div className={styles.MovieListCard} onClick={() => navigate(`${id}`)}>
-					<img
-						className={styles.MovieListCardImage}
-						src={`${baseImageURL}${poster_path}`}
-						alt={title}
-						loading='lazy'
-					/>
+					<PosterPreview title={title} posterPath={poster_path} />
 					<div className={styles.MovieListCardInfo}>
 						<h4>{title}</h4>
 						<div>

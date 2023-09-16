@@ -1,9 +1,17 @@
 .Header {
 	padding: 1rem 3rem;
+	position: sticky;
+	top: 0;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	justify-content: space-between;
 	box-shadow: 0 2px 5px var(--shadow-color);
+	background: #fff;
+	z-index: 99;
+}
+
+.Header > div {
+	align-self: center;
 }
 
 .Header > nav > menu {

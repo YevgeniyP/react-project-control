@@ -1,0 +1,26 @@
+.MovieDetailComponent {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header header" "poster movieInfo" "poster genreBudges";
+	gap: 2rem;
+}
+
+.MovieDetailComponent_header {
+	grid-area: header;
+	font-size: 26px;
+	font-weight: 500;
+	text-shadow: 1px 1px 1px var(--secondary-color);
+}
+
+.MovieDetailComponent_poster {
+	grid-area: poster;
+}
+
+.MovieDetailComponent_movieInfo {
+	grid-area: movieInfo;
+}
+
+.MovieDetailComponent_genreBudges {
+	grid-area: genreBudges;
+}

@@ -16,11 +16,6 @@
 	transition-duration: 1s;
 }
 
-.MovieListCardImage {
-	border-radius: inherit;
-	width: 100%;
-}
-
 .MovieListCardInfo {
 	height: 100%;
 	display: grid;
