@@ -17,7 +17,9 @@ export const MovieListCard: FC<MovieListCardPropsInterface> = ({ movie }) => {
 	return (
 		<>
 			{movie && (
-				<div className={styles.MovieListCard} onClick={() => navigate(`${id}`)}>
+				<div
+					className={styles.MovieListCard}
+					onClick={() => navigate(`/movies/${id}`)}>
 					<PosterPreview title={title} posterPath={poster_path} />
 					<div className={styles.MovieListCardInfo}>
 						<h4>{title}</h4>

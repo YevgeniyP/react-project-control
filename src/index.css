@@ -8,6 +8,7 @@
 	--active-element: rgba(0, 128, 128, 1);
 	--avatar-size: 50px;
 	--secondary-color: rgb(70, 70, 70, 0.8);
+	--header-text-color: rgb(245, 245, 245);
 }
 
 * {
@@ -25,8 +26,6 @@ body {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: var(--header-height) minmax(var(--outlet-height), auto);
-	/* overflow-x: hidden; */
-	/* overflow: auto; */
 }
 
 .container {

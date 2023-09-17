@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { Pagination } from "@mui/material";
 
 import { MovieComponent } from "../../components";
@@ -10,15 +10,15 @@ interface MoviePagePropsInterface {}
 
 export const MoviePage: FC<MoviePagePropsInterface> = () => {
 	const dispatch = useAppDispatch();
-	const [query, setQuery] = useSearchParams({ page: "1" });
 	const { movieList, totalPage } = useAppSelector((state) => state.movie);
+	const [query, setQuery] = useSearchParams({ page: "1" });
+	const { genre } = useParams();
 
 	const page = +query.get("page");
 
 	useEffect(() => {
-		dispatch(movieAction.getAllMovies(page));
-	}, [dispatch, page]);
-
+		dispatch(movieAction.getAllMovies({ page, genre }));
+	}, [dispatch, page, genre]);
 	return (
 		<div className={["container"].join(", ")}>
 			<MovieComponent movies={movieList} />

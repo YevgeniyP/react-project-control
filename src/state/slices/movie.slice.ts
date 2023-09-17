@@ -31,11 +31,11 @@ const initialState: MovieSliceInterface = {
 
 const getAllMovies = createAsyncThunk<
 	MovieResponseInterface,
-	number,
+	{ page: number; genre: string },
 	{ rejectValue: string[] }
->("getAllMovies", async (page, { rejectWithValue }) => {
+>("getAllMovies", async ({ page, genre }, { rejectWithValue }) => {
 	try {
-		const { data } = await movieService.getAll(page);
+		const { data } = await movieService.getAll(page, genre);
 		return data;
 	} catch (e) {
 		const error = (await e) as ErrorResponseInterface;

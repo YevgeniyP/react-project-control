@@ -1,0 +1,9 @@
+.GenreItem {
+	font-size: 20px;
+	color: var(--header-text-color);
+	background: var(--active-element);
+	padding: 0.3rem 0.8rem;
+	border-radius: 0.5rem;
+	box-shadow: 1px 1px 0 var(--shadow-color);
+	cursor: pointer;
+}

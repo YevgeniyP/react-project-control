@@ -1,7 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 
 import { MainLayout } from "../layouts";
-import { GenrePage, MovieDetailPage, MoviePage } from "../pages";
 
 export const router = createBrowserRouter([
 	{
@@ -14,15 +13,37 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: "movies",
-				element: <MoviePage />,
+				lazy: async () => {
+					const { MoviePage } = await import("../pages/MoviePage/MoviePage");
+					return { Component: MoviePage };
+				},
 			},
 			{
 				path: "movies/:id",
-				element: <MovieDetailPage />,
+				lazy: async () => {
+					const { MovieDetailPage } = await import(
+						"../pages/MovieDetailPage/MovieDetailPage"
+					);
+					return { Component: MovieDetailPage };
+				},
 			},
 			{
 				path: "genres",
-				element: <GenrePage />,
+				lazy: async () => {
+					const { GenrePage } = await import("../pages/GenrePage/GenrePage");
+					return { Component: GenrePage };
+				},
+				children: [
+					{
+						path: ":genre",
+						lazy: async () => {
+							const { MoviePage } = await import(
+								"../pages/MoviePage/MoviePage"
+							);
+							return { Component: MoviePage };
+						},
+					},
+				],
 			},
 		],
 	},

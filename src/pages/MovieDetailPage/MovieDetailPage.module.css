@@ -1,0 +1,9 @@
+.MovieDetailPage_backButton {
+	padding: 0.5rem 0.8rem;
+	color: var(--header-text-color);
+	background: var(--active-element);
+	border-radius: 0.3rem;
+	line-height: 180%;
+	font-size: 20px;
+	font-weight: 500;
+}

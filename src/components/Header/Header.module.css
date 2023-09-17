@@ -14,10 +14,24 @@
 	align-self: center;
 }
 
-.Header > nav > menu {
+.Header_menu {
 	padding: 0;
 	display: grid;
 	grid-auto-flow: column;
-	gap: 2rem;
+	gap: 3rem;
 	list-style: none;
+	height: 100%;
+	align-items: center;
+}
+
+.Header_menu > li {
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 180%;
+	background: var(--active-element);
+	padding: 0.3rem 1rem;
+	border-radius: 1rem;
+	color: rgb(245, 245, 245);
+	box-shadow: 1px 1px 1px var(--shadow-color);
 }
