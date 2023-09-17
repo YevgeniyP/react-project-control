@@ -1,11 +1,11 @@
+import { LinearProgress } from "@mui/material";
 import { FC } from "react";
-
-import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
+
+import { useAppSelector } from "../../hooks";
+import styles from "./Header.module.css";
 import { Logo } from "./Logo/Logo";
 import { UserInfo } from "./UserInfo/UserInfo";
-import { LinearProgress } from "@mui/material";
-import { useAppSelector } from "../../hooks";
 
 interface HeaderPropsInterface {}
 

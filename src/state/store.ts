@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import { genreSlice, movieSlice } from "./slices";
 
 export const store = configureStore({

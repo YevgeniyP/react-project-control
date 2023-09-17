@@ -1,7 +1,8 @@
 import { FC, useEffect } from "react";
+
+import { GenreComponent } from "../../components";
 import { useAppDispatch } from "../../hooks";
 import { genreAction } from "../../state";
-import { GenreComponent } from "../../components";
 
 interface GenrePagePropsInterface {}
 

@@ -1,8 +1,8 @@
 import { FC } from "react";
-
 import { useNavigate } from "react-router-dom";
-import styles from "./GenreItem.module.css";
+
 import { GenreInterface } from "../../../types";
+import styles from "./GenreItem.module.css";
 
 interface GenreItemPropsInterface {
 	genre: GenreInterface;

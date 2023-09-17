@@ -1,8 +1,9 @@
 import { FC } from "react";
-import { useAppSelector } from "../../hooks";
-import { GenreItem } from "./GenreItem/GenreItem";
-import styles from "./GenreComponent.module.css";
 import { Outlet } from "react-router-dom";
+
+import { useAppSelector } from "../../hooks";
+import styles from "./GenreComponent.module.css";
+import { GenreItem } from "./GenreItem/GenreItem";
 
 interface GenreComponentPropsInterface {}
 

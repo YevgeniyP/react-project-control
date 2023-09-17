@@ -33,10 +33,13 @@ export const MovieInfo: FC<MovieInfoPropsInterface> = ({ movie }) => {
 						<th>Budget:</th>
 						<td>{movie.budget}</td>
 					</tr>
-
 					<tr>
 						<th>Popularity:</th>
 						<td>{movie.popularity}</td>
+					</tr>
+					<tr>
+						<th>Release date:</th>
+						<td>{new Date(movie.release_date).toLocaleDateString()}</td>
 					</tr>
 					<tr>
 						<th>Rating:</th>

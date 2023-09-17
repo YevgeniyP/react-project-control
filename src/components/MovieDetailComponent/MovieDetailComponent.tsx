@@ -36,7 +36,6 @@ export const MovieDetailComponent: FC<
 					<div className={styles.MovieDetailComponent_genreBudges}>
 						<GenreBudges genres={currentMovie.genres} />
 					</div>
-					<div>Production company</div>
 				</div>
 			)}
 		</>
