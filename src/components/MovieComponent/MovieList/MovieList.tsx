@@ -1,11 +1,11 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode } from 'react';
 
-import styles from "./MovieList.module.css";
+import styles from './MovieList.module.css';
 
 interface MovieListPropsInterface {
-	children?: ReactNode;
+  children?: ReactNode;
 }
 
 export const MovieList: FC<MovieListPropsInterface> = ({ children }) => {
-	return <div className={styles.MovieList}>{children}</div>;
+  return <div className={styles.MovieList}>{children}</div>;
 };

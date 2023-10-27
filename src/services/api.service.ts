@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-import { apiToken, baseURL } from "../constants";
+import { apiToken, baseURL } from '../constants';
 
 export const apiService = axios.create({
-	baseURL,
-	headers: {
-		Authorization: `Bearer ${apiToken}`,
-	},
+  baseURL,
+  headers: {
+    Authorization: `Bearer ${apiToken}`,
+  },
 });

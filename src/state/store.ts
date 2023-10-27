@@ -1,12 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import { genreSlice, movieSlice } from "./slices";
+import { genreSlice, movieSlice } from './slices';
 
 export const store = configureStore({
-	reducer: {
-		movie: movieSlice.reducer,
-		genre: genreSlice.reducer,
-	},
+  reducer: {
+    movie: movieSlice.reducer,
+    genre: genreSlice.reducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
